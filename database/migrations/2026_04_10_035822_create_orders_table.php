@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('order_number')->unique();
             $table->date('order_date');
             $table->enum('status', ['pending', 'processing', 'completed', 'cancelled'])->default('pending');
-            $table->decimal('total_amount', 15, 2)->default(0);
             $table->text('notes')->nullable();
             $table->timestamps();
         });
